@@ -69,7 +69,7 @@
   </div>
 
   <div class="hero-image">
-    <img src="assets/image/right image bg (1).png" alt="circle img" class="circle-bg">
+    <img src="assets/image/right image circle.svg" alt="circle img" class="circle-bg">
     <img src="assets/image/banner img.svg" alt="Burger" class="burger">
 
   </div>
@@ -82,11 +82,166 @@
   </div>
 </section>
 
+<section class="exclusive-menu">
+  <div class="container">
+    <h2>Exclusive Menu For You!</h2>
+    <p>Experience the epitome of luxury dining with our exclusive menu, a carefully curated selection for our discerning patrons</p>
+
+    <div class="menu-categories">
+      <button><img src="assets/image/all food.png" alt=""> All foods</button>
+      <button class="active"><img src="assets/image/pizza bite.png" alt=""> Pizza</button>
+      <button><img src="assets/image/burger.png" alt=""> Burgers</button>
+      <button><img src="assets/image/noodels.png" alt=""> Noodles</button>
+      <button><img src="assets/image/Sandwiches.png" alt=""> Sandwiches</button>
+      <button><img src="assets/image/Fried Chicken.png" alt=""> Fried Chicken</button>
+    </div>
+
+    <div class="slider-wrapper" style="position:relative; overflow:hidden; width:100%; margin:auto;">
+      <div class="menu-items" style="display:flex; gap:20px; transition:transform 0.6s ease;">
+        
+        <div class="menu-card" style="min-width:250px; text-align:center;">
+          <img src="assets/image/Chicken cheese delight.svg" alt="Chicken cheese delight">
+          <h3>Chicken cheese delight</h3>
+          <p>Pizza Dough • Pizza Sauce • Cheese • Chicken • Vegetables • Herbs and Spices • Olive Oil</p>
+          <button>Order Now</button>
+        </div>
+        
+        <div class="menu-card" style="min-width:250px; text-align:center;">
+          <img src="assets/image/Veg Corn pizza.svg" alt="Veg Corn pizza">
+          <h3>Veg Corn pizza</h3>
+          <p>Pizza Dough • Pizza Sauce • Cheese • Chicken • Vegetables • Herbs and Spices • Olive Oil</p>
+          <button>Order Now</button>
+        </div>
+        
+        <div class="menu-card" style="min-width:250px; text-align:center;">
+          <img src="assets/image/Margerita pizza.svg" alt="Margerita pizza">
+          <h3>Margerita pizza</h3>
+          <p>Pizza Dough • Pizza Sauce • Cheese • Chicken • Vegetables • Herbs and Spices • Olive Oil</p>
+          <button>Order Now</button>
+        </div>
+        
+        <div class="menu-card" style="min-width:250px; text-align:center;">
+          <img src="assets/image/Chicken Tikka pizza.svg" alt="Chicken Tikka pizza">
+          <h3>Chicken Tikka pizza</h3>
+          <p>Pizza Dough • Pizza Sauce • Cheese • Chicken • Vegetables • Herbs and Spices • Olive Oil</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+      </div>
+
+
+      <div class="slide-arrow" id="arrowRight" 
+           style="position:absolute; top:50%; right:10px; transform:translateY(-50%); cursor:pointer;">
+        <img src="assets/image/slide arrow copy.png" alt="slide">
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  const menuItems = document.querySelector('.menu-items');
+  const cards = document.querySelectorAll('.menu-card');
+  const arrowRight = document.getElementById('arrowRight');
+
+  let currentIndex = 0;
+
+  function getCardWidth() {
+    return cards[0].offsetWidth + 20; }
+
+  arrowRight.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= cards.length) {
+      currentIndex = 0; 
+    }
+    const offset = -currentIndex * getCardWidth();
+    menuItems.style.transform = `translateX(${offset}px)`;
+  });
+
+  
+  window.addEventListener('resize', () => {
+    const offset = -currentIndex * getCardWidth();
+    menuItems.style.transform = `translateX(${offset}px)`;
+  });
+</script>
+
+<section class="what-we-serve">
+  <h4>WHAT WE  <span>SERVE.</span></h4>
+  <h2>Your Favorite Food Delivery Partner</h2>
+  <p>We offer a diverse and delectable selection of culinary delights through our online food ordering website, ensuring a seamless and savory dining experience delivered right to your doorstep.</p>
+
+  <div class="services">
+    <div class="service-card">
+      <img src="assets/image/Fastest Delivery..svg" alt="Fastest Delivery">
+      <h3>Fastest Delivery</h3>
+      <p>Fulfilling your cravings with the <br>fastest wheels in town</p>
+    </div>
+    <div class="service-card">
+      <img src="assets/image/Easy Ordering..svg" alt="Easy Ordering">
+      <h3>Easy Ordering</h3>
+      <p>Easiest way to deliciousness<br>Order now with a breeze!</p>
+    </div>
+    <div class="service-card">
+      <img src="assets/image/Best Quality.svg" alt="Best Quality">
+      <h3>Best Quality</h3>
+      <p>Savor perfection with every bite where<br> quality meets culinary artistry</p>
+    </div>
+  </div>
+
+
+  <div class="shape-dot left">
+    <svg width="12" height="12"><circle cx="6" cy="6" r="6" fill="#F4C131"/></svg>
+  </div>
+
+<div class="shape-dot right">
+
+    <svg width="12" height="12"><circle cx="6" cy="6" r="6" fill="#F4C131"/></svg>
+  </div>
+
+
+  <div class="shape-red-star">
+   
+    <svg width="18" height="18" viewBox="0 0 24 24">
+      <polygon fill="rgba(255, 135, 96, 1)"  points="12,2 15,9 22,9 16.5,14 18.5,21 12,17 5.5,21 7.5,14 2,9 9,9"/>
+    </svg>
+  </div>
+
+  <div class="shape-golden-star">
+
+    <svg width="20" height="20" viewBox="0 0 24 24">
+      <polygon fill="#F4C131" points="12,2 15,9 22,9 16.5,14 18.5,21 12,17 5.5,21 7.5,14 2,9 9,9"/>
+    </svg>
+  </div>
+</section>
+
+<section class="download-app">
+  <div class="download-container">
+    <div class="app-image">
+  
+  <img src="assets/image/phone circle.svg" alt="Big Circle" class="circle big">
+  <img src="assets/image/phone short circle.svg" alt="Small Circle" class="circle small">
+
+  <img src="assets/image/iPhone.png" alt="Mobile App" class="phone">
+</div>
+
+    <div class="app-content">
+      <h2>Download our Mobile App</h2>
+      <p>
+       Elevate your dining experience with our mobile app. Download now for easy ordering and exclusive perks
+      </p>
+      <div class="app-buttons">
+        <a href="#"><img src="assets/image/Play store.svg" alt="Google Play"></a>
+        <a href="#"><img src="assets/image/App store.svg" alt="App Store"></a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-container">
     <h2 class="footer-logo">
-        <img src="assets/image/RushBite (1).png" alt=""><span> <img src="assets/image/fork and knife.png"
+        <img src="assets/image/RushBite footer icon.png" alt=""><span> <img src="assets/image/fork and knife.png"
           alt="knife" class="fork icon"> 
     </h2>
     <p class="footer-desc">
